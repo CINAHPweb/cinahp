@@ -11,10 +11,19 @@ const NoticiaIndividual = async ({ params }) => {
     return <p>Noticia no encontrada.</p>;
   }
 
+  const imageSrc = extractImageFromContent(post.content);
 
   return (
     <div>
-
+      <div className="banner-nosotros">
+        <Image
+          src={imageSrc}
+          width={1500}
+          height={800}
+          className="hidden md:block"
+          alt={post.title || 'Noticia'}
+        />
+      </div>
       <div className="news-container">
         <h1>{post.title}</h1>
         <p>

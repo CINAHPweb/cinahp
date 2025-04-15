@@ -178,15 +178,12 @@ button:disabled {
     font-size: 30px;
     color: #404040;
 }
-
-
 .sitsect-cont{
     display: flex;
     flex-direction: row;
     gap: 20px;
     padding-left: 10px;
 }
-
 .sitsect-cont > div:first-child { 
     width: 30%; /* Solo afecta al primer hijo (párrafo) */
     font-size: 20px;
@@ -195,28 +192,17 @@ button:disabled {
 .sitsect-cont > div:nth-child(2) { 
     width: 70%; /* Solo afecta a .sitsect-box-container */
     display: flex;
+    flex-wrap: wrap; /* Permite que los hijos conserven su tamaño */
     gap: 15px; /* Espaciado entre elementos */
 }
 
-.sitsect-box-container {
-    display: flex;
-    gap: 10px;
-    flex-wrap: nowrap; /* Keeps items in a single row */
-    overflow-x: auto; /* Enables horizontal scrolling */
-    scroll-behavior: smooth; /* Smooth scrolling effect */
-    padding-bottom: 10px; /* Prevents scrollbar from covering content */
-    height: 250px;
-}
-
-  
-.sitsect-box {
+.sitsect-box{
     display: flex;
     flex-direction: column;
     padding: 10px;
     height: 200px;
     width: 220px;
 }
-
 .sitsect-box img {
     flex: 3; /* La imagen ocupará 3 partes del espacio */
     width: 220px; /* Mantén proporciones */
@@ -293,6 +279,7 @@ button:disabled {
 }
 .moto {
     padding: 50px 50px;
+    overflow: visible;
     background-color: #ebe3e3bd;
     font-size: 45px;
     text-align: center;
