@@ -12,7 +12,8 @@
     "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
     "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
     "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
-    "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
+    "vercel-build": "pnpm add sharp --platform=linux --arch=x64 && next build"
   },
   "dependencies": {
     "@payloadcms/db-vercel-postgres": "^3.25.0",
@@ -28,6 +29,7 @@
     "graphql": "^16.10.0",
     "next": "15.1.5",
     "payload": "latest",
+    "pnpm": "^10.8.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-hook-form": "^7.54.2",
